@@ -22,6 +22,6 @@ def get_names(text):
             if type(chunk) == nltk.tree.Tree:
                 if chunk.label() == 'PERSON':
                     names.append(' '.join([c[0] for c in chunk]))
-    return names
-
-print(get_names("Hi Seydou Abioye here,can you help me?"))
+    if len(names) == 0:
+        return ""
+    return names[0]
