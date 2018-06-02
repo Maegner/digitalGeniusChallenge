@@ -20,3 +20,14 @@ def test_add_model():
 
     result = manager.get_model(mod.get_id())
     assert result.get_id() == mod.get_id()
+
+def test_pressistency():
+    mod = model.Model("id","response: {}")
+    models = {mod.get_id(): mod}
+    manager = model_manager.Model_Manager(models)
+    
+    manager.store()
+    assert manager.retrieve_data()
+
+    result = manager.get_model(mod.get_id())
+    assert result.get_id() == mod.get_id()

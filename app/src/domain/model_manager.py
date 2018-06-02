@@ -8,7 +8,7 @@ class Model_Manager:
         self.current_models = models
 
     def store(self):
-        with open("model_manager",'wb') as f:
+        with open('model_manager','wb') as f:
             pickle.dump(self.current_models,f)
     
     def add_model(self,new_model):
@@ -20,3 +20,11 @@ class Model_Manager:
         except KeyError:
             result = None
         return result
+    
+    def retrieve_data(self):
+        try:
+            with open('model_manager','rb') as f:
+                self.current_models = pickle.load(f)
+                return True
+        except FileNotFoundError:
+            return False
