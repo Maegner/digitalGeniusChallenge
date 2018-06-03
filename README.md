@@ -8,14 +8,14 @@ flask |
 nltk |
 numpy |
 
-##Getting started
+## Getting started
 
-##Build the docker image
+## Build the docker image
 ```sh
 $ cd app ;
 $ docker build -t chat_bot .
 ```
-##Run the docker image
+## Run the docker image
 ```sh
 $ cd app ;
 $ docker run -d -p 5000:5000 chat_bot
