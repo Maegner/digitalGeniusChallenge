@@ -17,7 +17,6 @@ $ docker build -t chat_bot .
 ```
 ## Run the docker image
 ```sh
-$ cd app ;
 $ docker run -d -p 5000:5000 chat_bot
 ```
 Now you can access the application via the URL http://localhost:5000
