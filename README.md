@@ -37,7 +37,7 @@ with the header : Content-type : application/json
 }
 ```
 
-The available models are:
+### The available models are:
     * 26444047-56f8-43e5-8e25-b70b8e5367f1
     * f59da1c7-c060-4aec-b3a0-dd7453a4c541
 
