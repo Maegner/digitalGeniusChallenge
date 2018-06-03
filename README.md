@@ -76,7 +76,7 @@ The Model used to find the names in a string of text has some problems with the 
 "Hi <NAME> here, can you give me a hand?", sometimes the model will not be able to find the name, for example, if
 <NAME> == 'Siri' no name is found but if <NAME> == 'Seydou Abioye' or <NAME> == 'John' it will.
 
-## Pressisting the models
+## Persisting the models
 
 Both models are persisted in a pickle that contains a hash table that maps model_id to the model instance, this pickle is used to simulate an access to a database.
 
