@@ -23,5 +23,8 @@ EXPOSE 5000
 # Define environment variable
 ENV NAME DigitalGenius
 
+# Run unit tests
+CMD ["pytest"]
+
 # Run app.py when the container launches
 CMD ["python3", "app.py"]

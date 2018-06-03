@@ -7,8 +7,8 @@ def test_format_1():
     assert name_parser.get_names(requestString) == "Seydou Abioye"
 
 def test_format_2():
-    requestString = "Hello my name is Siri, can you help me?"
-    assert name_parser.get_names(requestString) == "Siri"
+    requestString = "Hello my name is Francisco, can you help me?"
+    assert name_parser.get_names(requestString) == "Francisco"
 
 def test_no_name():
     requestString = "Hello there, can you help me?"
