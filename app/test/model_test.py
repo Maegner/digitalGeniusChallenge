@@ -1,5 +1,6 @@
 import src.domain
 from src.domain import model
+import pytest
 
 def test_constructor():
     response = "{}"

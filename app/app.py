@@ -35,7 +35,7 @@ def settup(debug=True):
         manager.populate()
         manager.store()
 
-    app.run(debug=debug)
+    app.run(debug=debug,host='0.0.0.0',port=5000)
 
 if __name__ == '__main__':
-    settup(False)
+    settup()

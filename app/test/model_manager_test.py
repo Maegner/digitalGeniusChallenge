@@ -1,5 +1,6 @@
 import src.domain
 from src.domain import model_manager,model
+import pytest
 
 def test_constructor_empty():
     manager = model_manager.Model_Manager()
