@@ -1,14 +1,14 @@
 from src.domain import model_manager
 from src.utils import name_parser
-from flask import Flask,abort,request
+from flask import Flask,abort,request,jsonify
 
 manager = model_manager.Model_Manager()
 app = Flask(__name__)
 
 @app.route('/help',methods=['POST'])
 def help_request():
-    help = request.get_json()
     
+    help = request.get_json()
     try:
         help_id = help["id"]
         help_request = help["request"]
@@ -18,12 +18,12 @@ def help_request():
         
         if help_model == None:
             abort(404)
-            return
-        
-        return help_model.get_response(name)
+
+        response = {"response":help_model.get_response(name)}
+
+        return jsonify(response)
     except KeyError:
         abort(400)
-        return
 
 def settup(debug=True):
     
@@ -38,4 +38,4 @@ def settup(debug=True):
     app.run(debug=debug)
 
 if __name__ == '__main__':
-    settup()
+    settup(False)
